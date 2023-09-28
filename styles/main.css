@@ -11,7 +11,7 @@ html{
 }
 body{
 
-    background-color: aqua;
+    background-color: rgb(52, 52, 52);
     padding-bottom: 1000px;
     height: 100%;
     width: 100%;
@@ -86,61 +86,27 @@ padding: 0.3em 1em;
     color: rgb(255,255,255);
 }
 main{
-    display: flex;
-    flex-direction: row;
+
     width: 100%;
     height: 100%;
-    
+
+
 }
-.art-side{
-    background-color: white;
-    color: black;
-    flex: 1;
-    position: static;
-    left: 0;
-    top: 0;
-    right: 50%;
+.main-div{
+    margin-top: ;
+    width: 70%;
     height: 100%;
-        padding-top: 3em;
-
+    background: rgb(79, 79, 79) ;
 }
-.tech-side{
-    background:linear-gradient(to bottom right, rgb(17,12,80) , rgb(20, 13, 55), rgb(17,12,80));
-    color: white;
-    flex: 1;
-    height: 100%;
-    position: static;
-    right: 0;
-    top: 0;
-    left: 50%;
-    z-index: 0;
-    padding-top: 3em;
-}
-.bai,.andrei{
-    color: black; 
-    padding: 0;
-    margin: 0;
-    font-family:  'Neucha', cursive;
-
-}
-.as, .silviu{
-    color:white;
-    padding: 0;
-    margin: 0;
-}
-
-.silviu{
-    margin: 0.1em;
-}
-.tech-side p{
-    z-index: 5;
-}
-.andrei{
-    margin-right:1.5em ;
-}
-
 
 @media screen and (max-width:990px) {
   .main { flex-wrap: wrap;  }
   
+}
+img{
+    background-color: rgba(0, 0, 0, 0);
+}
+.theme-button{
+    height: 3em;
+    background-color: transparent;
 }
