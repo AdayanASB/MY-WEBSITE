@@ -3,6 +3,11 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+  @font-face {
+    font-family: 'notinoBAS';
+    src: url(./fonts/Migha-Expanded.otf);
+  }
 *{
     margin: 0;
 }
@@ -19,6 +24,9 @@ body{
     background-position: -1%;
     height: 100%;
     width: 100%;
+}
+a{
+    text-decoration: none;
 }
 
 .header{
@@ -48,6 +56,8 @@ justify-content: space-evenly;
 column-gap: 1em;
 align-items: center;
 padding-right: 2em;
+color:black;
+
 }
 
 .main-name{
@@ -67,9 +77,9 @@ padding-right: 2em;
     right: 50%;
     color: rgb(255,255,255);
 }
-a, a:link, a:visited{
+ .header-buttons a,.header-buttons a:link,.header-buttons a:visited{
     text-decoration: none;
-    color: rgb(255,255,255);
+    color: rgb(0, 0, 0);
     transition: all 0.25s ease;
 padding: 0.3em 1em;
 
@@ -79,7 +89,7 @@ padding: 0.3em 1em;
 }
 .header-buttons a:hover{
     background-color: rgba(255,255,255,0.2);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 .header-buttons a:active{
     background-color: white;
@@ -87,8 +97,8 @@ padding: 0.3em 1em;
 }
 #home{
     background-color: rgba(255,255,255,0);
-    border: 2px solid rgb(255,255,255);
-    color: rgb(255,255,255);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 .main-div{
@@ -174,14 +184,15 @@ main{
 }
 
 .title-name{
-    font-family: 'Limelight', cursive;
+    font-family: 'notinoBAS', cursive;
     font-size: 6em;
+    letter-spacing: 0.2em;
 }
 .profile-pic{
-    height: 50vh;
-    width: 50vh;
+    height: 50vmin;
+    width: 50vmin;
     object-fit: cover;
-    object-position: center;
+    object-position: 50% 20%;
     border-radius: 50%;
     border: 3px solid rgb(0,0,0);
 }
@@ -194,17 +205,19 @@ main{
     position: absolute;
     top:0;
     right: 40%;
+    color: black;
 }
 .artist{
     writing-mode: horizontal-tb;
     text-orientation: upright;
     font-size: 1em;
     position: absolute;
-    bottom: 4%;
+    bottom: 6%;
     left: -60%;
     letter-spacing:0.3em;
     cursor: pointer;
     transform: translateY(0.66em);
+        color: black;
 }
 .first-description{
     font-size: 1.05em;
@@ -225,3 +238,13 @@ main{
     border-radius: 15px;
 }
 
+.rFromArt{
+    margin: 0;
+    padding: 0 ;
+}
+.hidden{
+    color: transparent;
+}
+.show{
+    color: black;
+}
