@@ -11,7 +11,7 @@ let r=document.querySelector(':root');
 let buttonElementMusic=document.querySelector('.js-button-music');
 let isPlaying=false;
 let anim=gsap.to(".music-icon",{rotate:360, duration:5, repeat:-1, ease:"none", paused:true});
-let secAnim=gsap.to(".ac-music",{rotate:'10',duration:3,repeat:-1, ease:"none"});
+let secAnim=gsap.to(".ac-music",{rotate:'10',duration:3,repeat:-1, ease:"none", yoyo:true});
 
 
 buttonElementMusic.addEventListener("click",()=>{
@@ -30,6 +30,8 @@ buttonElementMusic.addEventListener("click",()=>{
     audioPlayer.pause();
     audioPlayer.currentTime=0;
     isPlaying=false;  
+    secAnim.restart();
+    secAnim.pause();
     anim.restart();
     anim.pause();
     r.style.setProperty('--visible-or-not','none');
