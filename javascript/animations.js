@@ -15,7 +15,7 @@ devText.onmouseover=function(event){
           return devText.dataset.textMain[index];
         }
 
-      return letters[Math.floor(Math.random()*26)];
+      return letters[Math.floor(Math.random()*26)]; 
       }).join(""); 
     
       if(iterration>9){clearInterval(interval);}
@@ -23,5 +23,10 @@ devText.onmouseover=function(event){
       rFromArt.classList.remove("show");
       rFromArt.classList.add("hidden");
     },30);
+    setTimeout(()=>{
 
+      rFromArt.classList.add("show");
+      rFromArt.classList.remove("hidden");
+    },900);
 };
+

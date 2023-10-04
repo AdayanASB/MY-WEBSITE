@@ -131,9 +131,7 @@ img{
 }
 .js-button-music{
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     background-color: transparent;
     border: 2px solid rgb(22, 22, 22);
     height: 3em;
@@ -143,12 +141,43 @@ img{
     bottom: 2em;
     left: 2em;
 }
+:root{
+    --procent-to-display:60%;
+    --visible-or-not:none;
+}
+.rotate-wrapper{
+    position: relative;
+    height: 99%;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
 .music-icon{
-    height: 50%;
+    height: var(--procent-to-display);
 
     object-fit: contain;
     object-position: center;
+/*    animation: myRotate 5s linear 0s infinite;*/
 }
+.ac-music{
+    position: absolute;
+    top: -45%;
+    right: -20%;
+    height: 3.5em;
+    display: var(--visible-or-not);
+    object-fit: contain;
+    transform-origin: top center;
+
+}
+
+@keyframes myRotate{
+    50%{
+      transform: rotateZ(360deg);
+    }
+  }
 
 
 main{
