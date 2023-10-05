@@ -164,9 +164,10 @@ img{
 }
 .ac-music{
     position: absolute;
-    top: -45%;
-    right: -20%;
-    height: 3.5em;
+    top: -30%;
+    right: -30%;
+    height: 3.25em;
+    transform: rotateZ(8deg);
     display: var(--visible-or-not);
     object-fit: contain;
     transform-origin: top center;
