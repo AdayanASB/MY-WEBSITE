@@ -142,7 +142,7 @@ img{
     left: 2em;
 }
 :root{
-    --procent-to-display:60%;
+    --procent-to-display:90%;
     --visible-or-not:none;
 }
 .rotate-wrapper{
