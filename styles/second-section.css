@@ -1,17 +1,9 @@
-.line-horiz{
-  height: 80px;
-  width: 1px;
-  background-color: rgb(209, 207, 207);
-
-}
-
-
 .second-section{
-  padding-top: 40%;
+  padding-top: 23%;
   display: flex;
 justify-content: center;
 align-items: center;
-
+  flex-direction: column;
   width: 70%;
 }
 .second-wrapper{
@@ -22,34 +14,145 @@ align-items: center;
   justify-content: space-between;
   column-gap: 1em;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid black;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.278);
+  background-color: transparent;
+  border: none;
   border-radius: 1em;
+  position: relative;
+}
+.rotating-dev-artist{
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  height: 40%;
+  z-index: 1;
+  animation: rotate 3.5s linear 0s infinite;
+    border: 1px solid rgba(30, 230, 255,0.9);
+    border-radius: 50%;
+
+}
+
+.rotating-dev-artist2{
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  height: 40%;
+  z-index: 1;
+  animation: rotate 3.5s linear 0s infinite;
+  border: 1px solid rgba(250, 30, 255,1);
+border-radius: 50%;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+
 }
 
 .developer-about-me, .artist-about-me{
   position: relative;
   flex: 1;
   padding: 1em 1em;
-background-color: rgb(255, 255, 255);
-border: 1px solid rgba(0, 0, 0, 0.278);
-border-radius: 1em;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.278);
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
 }
-.relative-right{
+
+.developer-about-me:hover{
+  box-shadow: 0em 0em 2em rgba(30, 230, 255,0.5);
+  
+}
+.artist-about-me{
+  z-index: 2;
+  overflow: hidden;
+}
+.developer-about-me{
+  z-index: 2;
+}
+.artist-about-me:hover{
+  box-shadow: 0em 0em 2em rgba(250, 30, 255,0.5);
+}
+@keyframes backg-move1 {
+  from{
+    background-position: 0;
+  }
+  to{
+    background-position: 200%;
+  }
+}
+
+@keyframes backg-move2 {
+  from{
+    background-position: 0;
+  }
+  to{
+    background-position: -200%;
+  }
+}
+
+.developer-title{
+  font-weight: 700;
+  letter-spacing: 10px;
   position: absolute;
-  top: 10%;
-  right: 0;
+  top: 6%;
+  right: 10%;
+  font-size: 1.5em;
+  background: linear-gradient(45deg,rgb(126, 240, 255), rgb(32, 68, 159),rgb(158, 244, 255));
+  background-position: 50% 50%;
+  background-size: 200%;
+  animation: backg-move1 3s ease-in-out 0s infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+ 
 }
 .relative-left{
+  font-weight: 700;
+  letter-spacing: 10px;
   position: absolute;
-  top: 10%;
-  left: 0;
+  top: 6%;
+  left:10%;
+  font-size: 1.5em;
+  background: linear-gradient(-45deg,rgb(250, 190, 255), rgb(99, 24, 117),rgb(250, 190, 255));
+  background-position: 50% 50%;
+  background-size: 200%;
+  animation: backg-move2 3s ease-in-out 0s infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.vertical-text{
 
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-
+.about-dev{
+  color: rgb(50,50,50);
+  padding: 3em 1em 1.5em 1em;
+}
+.projects-button{
+  padding: 0.5em 0.5em;
+  border-radius: 0.51em;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#art{
+  border: 1px solid rgba(250, 30, 255,1);
+}
+#dev{
+  border: 1px solid rgba(30, 230, 255,0.9)
+}
+.projects-button:hover{
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.projects-button:active{
+background-color: rgba(0, 0, 0, 0.08);
 }

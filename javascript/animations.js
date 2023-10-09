@@ -3,6 +3,7 @@ let letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let rFromArt=document.querySelector('.rFromArt');
 
 
+
 let devText= document.querySelector('.js-dev-text');
 devText.onmouseover=function(event){
   let iterration=0;
