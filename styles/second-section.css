@@ -4,6 +4,7 @@
 justify-content: center;
 align-items: center;
   flex-direction: column;
+  row-gap: 2em;
   width: 70%;
 }
 .second-wrapper{
@@ -155,4 +156,18 @@ border-radius: 50%;
 }
 .projects-button:active{
 background-color: rgba(0, 0, 0, 0.08);
+}
+.about-me-title{
+  font-size: 4em;
+/*  font-weight: 700;*/
+  font-family: monospace;
+  color: rgb(255, 255, 255);
+  padding: 0.1em 0.5em;
+  
+  border-radius: 20% 2em 20% 2em;
+  background: linear-gradient(90deg,rgb(20, 49, 239),rgb(250, 30, 255),rgb(250, 30, 255), rgb(20, 49, 239));
+  background-size: 200%;
+  background-position: 0% 100%;
+  animation: backg-move2 5s ease-in-out 0s infinite;
+
 }
