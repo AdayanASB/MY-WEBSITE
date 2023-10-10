@@ -1,4 +1,23 @@
-.random-before{
-  font-size: 3em;
-  
+.random-brfore{
+  font-size: 48px;
+  margin: 1000px 0;
+  padding: 1em 2em;
+  position: relative;
+  background-color: gray;
+  z-index: 1;
+  font-family: monospace;
+  user-select: none;
+}
+.random-brfore::before{
+  content: "ABOUT ME";
+  color:white ;
+  font-size: 46px;
+  z-index: 2;
+  font-family: monospace;
+  position: absolute;
+  left: 18%;
+  letter-spacing: 1px;
+}
+.random-brfore::before::selection{
+  user-select: none;
 }
