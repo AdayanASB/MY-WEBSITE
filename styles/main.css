@@ -17,7 +17,7 @@ html{
   width: 100%;
 }
 body{
-
+  
   padding-bottom: 1000px;
   background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0);
   background-size: 40px 40px;
@@ -102,7 +102,6 @@ a{
 }
 
 .main-div{
-
   width: 70%;
   height: 100%;
   background: rgb(79, 79, 79) ;
@@ -112,26 +111,9 @@ a{
 img{
   background-color: rgba(0, 0, 0, 0);
 }
-.theme-button{
-  height: 100%;
-  background-color: transparent;
-}
-.theme-main-button{
-  display: flex;
-  background-color: transparent;
-  border: none;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  height: 3em;
-  width: 3em;
-}
-.theme-main-button:hover{
-  background-color: rgba(0, 0, 0, 0.078);
-}
+
 .js-button-music{
   position: fixed;
-
   background-color: transparent;
   border: 2px solid rgb(22, 22, 22);
   height: 3em;
