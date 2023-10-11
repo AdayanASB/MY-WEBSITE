@@ -171,3 +171,21 @@ background-color: rgba(0, 0, 0, 0.08);
   animation: backg-move2 5s ease-in-out 0s infinite;
 
 }
+
+
+@media screen and (max-width:900px){
+  .second-wrapper{
+    flex-wrap: wrap;
+    row-gap: 2em;
+  }
+  .artist-about-me, .developer-about-me{
+    min-width: 70vw;
+    
+  }
+  .developer-title, .relative-left{
+    position: static;
+  }
+  .about-dev{
+    padding: 1em 1em 1.5em 1em;
+  }
+}

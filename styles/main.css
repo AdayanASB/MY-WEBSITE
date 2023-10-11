@@ -253,3 +253,12 @@ main{
 .show{
   color: black;
 }
+
+@media screen and (max-width:1100px) {
+  .wrapper-section-1{
+    column-gap: 0;
+  }
+  .developer{
+    display: none;
+  }
+}
