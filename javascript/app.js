@@ -3,6 +3,12 @@
 //languages.forEach(()=>{
 
 //});
+
+
+const swup = new Swup({
+  
+});
+
 let musicNote='./PHOTOS/SVG/music-solid2.svg';
 let vinylIcon='./PHOTOS/SVG/compact-disc-solid.svg'
 let audioPlayer= document.querySelector('.main-audio');
@@ -14,7 +20,7 @@ let anim=gsap.to(".music-icon",{rotate:360, duration:5, repeat:-1, ease:"none", 
 let secAnim=gsap.to(".ac-music",{rotate:'15',duration:2,repeat:-1, ease:"none", yoyo:true, paused:true});
 let thirdAnim=gsap.from(".ac-music",{ opacity:0, paused:true, duration:0.7});
 buttonElementMusic.addEventListener("click",()=>{
-  
+  console.log('YOU PRESSED THE MUSIC');
 
   if(!isPlaying){
     playAudio();

@@ -2,11 +2,6 @@
 let letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let rFromArt=document.querySelector('.rFromArt');
 
-let aboutMeTitle=document.querySelector('.about-me-title');
-aboutMeTitle.innerHTML=aboutMeTitle.innerHTML.split("").map((charRn,index)=>{
-return `<span style="">${charRn}</span>`;
-}).join("");
-
 let devText= document.querySelector('.js-dev-text');
 devText.onmouseover=function(event){
   let iterration=0;

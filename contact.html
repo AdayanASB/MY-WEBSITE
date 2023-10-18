@@ -3,20 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/main.css">
   <title>Document</title>
+
+  <link rel="stylesheet" href="./styles/media-querryies.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/header.css">
+
+  <script src="./javascript/gsap.min.js"></script>
+
+  
+  <script defer src="./javascript/animations.js"></script>
+  <script defer src="./javascript/app.js"></script>
+
 </head>
 <body>
   
+  <button class="js-button-music"><img class="ac-music" src="./PHOTOS/AC GRI.svg"><div class="rotate-wrapper"><img class="music-icon" src="./PHOTOS/SVG/compact-disc-solid.svg"></div></button>
   <div class="header">
-    <img class="logo" src="./PHOTOS/SVG/Asset 1.svg">
+  <img class="logo" src="./PHOTOS/SVG/Asset 1.svg">
 
-    <div class="header-buttons">
-        <a id="home" href="./index.html">Home</a>
-        <a href="./art.html">Art</a>
-        <a href="./tech.html">Tech</a>
-        <a href="./contact.html">Contact</a>
-    </div>
+  <div class="header-buttons">
+  <a id="active-button" href="./index.html">Home</a>
+  <a href="./art.html">Art</a>
+  <a href="./tech.html">Tech</a>
+  <a href="./contact.html">Contact</a> 
+  <audio class="main-audio" loop>
+  <source src="./randomAssets/Acejax feat. Danilyon - By My Side [NCS Release].mp3" type="audio/mp3">
+  </audio>
+
+  </div>
+
+
+</div>>
 
 </body>
 </html>

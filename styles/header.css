@@ -1,0 +1,106 @@
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+.logo{
+  display: inline;
+  height: 80%;
+  margin-left: 1em;
+}
+.header-buttons{
+  flex: 1;
+  margin-right: 2em;
+  display: flex;
+  max-width: 20em;
+  justify-content: space-evenly;
+  column-gap: 1em;
+  align-items: center;
+  padding-right: 2em;
+  color:black;
+
+}
+
+.header-buttons a,.header-buttons a:link,.header-buttons a:visited{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: all 0.25s ease;
+  padding: 0.3em 1em;
+  background:linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  background-size: 0% 2px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  border: none;
+
+}
+.header-buttons a:hover{
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+  background-size: 70% 2px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+.header-buttons a:active{
+  background-color: white;
+  color: black;
+}
+#active-button{
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+  background-size: 70% 2px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+
+.js-button-music{
+  position: fixed;
+  background-color: transparent;
+  border: 2px solid rgb(22, 22, 22);
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  cursor: pointer;
+  bottom: 2em;
+  left: 2em;
+}
+:root{
+  --procent-to-display:90%;
+  --visible-or-not:none;
+}
+.rotate-wrapper{
+  position: relative;
+  height: 99%;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.music-icon{
+  height: var(--procent-to-display);
+
+  object-fit: contain;
+  object-position: center;
+
+}
+.ac-music{
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  height: 3.25em;
+  transform: rotateZ(8deg);
+  display: var(--visible-or-not);
+  object-fit: contain;
+  transform-origin: top center;
+
+}

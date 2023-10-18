@@ -9,15 +9,24 @@
 
     <link rel="stylesheet" href="./styles/media-querryies.css">
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/artist.css">
+    <link rel="stylesheet" href="./styles/first-section.css">
     <link rel="stylesheet" href="./styles/second-section.css">
     <link rel="stylesheet" href="./styles/third-section.css">
+    <link rel="stylesheet" href="./styles/header.css">
 
-    <script src="./javascript/gsap.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="crossorigin="anonymous"></script>
+    <!--SWUP LIBRARY FOR TRANSITIONS BETWEEN PAGES-->
+    <script defer src="https://unpkg.com/swup@4"></script>
+
+    <!--GSAP FOR BASIC ANIMATIONS-->
+    <script defer src="./javascript/gsap.min.js"></script>
+    <!--JQUERRY FOR SELECTING CHILD WITH TEXT-->
+    <script defer src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="crossorigin="anonymous"></script>
+    <!--ANIMATIONS AND MAIN FUNCTIONALITY FOR BUTTONS-->
     <script defer src="./javascript/animations.js"></script>
     <script defer src="./javascript/app.js"></script>
+    <script defer src="./javascript/main-page.js"></script>
+
   </head>
   <body>
 
@@ -26,7 +35,7 @@
     <img class="logo" src="./PHOTOS/SVG/Asset 1.svg">
 
     <div class="header-buttons">
-    <a id="home" href="./index.html">Home</a>
+    <a id="active-button" href="./index.html">Home</a>
     <a href="./art.html">Art</a>
     <a href="./tech.html">Tech</a>
     <a href="./contact.html">Contact</a> 
@@ -91,7 +100,6 @@
               <div class="used-tech"><img src="./PHOTOS/SVG/compact-disc-solid.svg" class="max-height-icon"><img src="./PHOTOS/SVG/compact-disc-solid.svg" class="max-height-icon"><img src="./PHOTOS/SVG/compact-disc-solid.svg" class="max-height-icon"></div>
             </div>
             <div class="random-prj" id="4">
-              <img src="./PHOTOS/_MG_6638.jpg" class="project-photo-display">
               <div class="overAnything">
                 <p class="title-of-project">PLACEHOLDER TITLE</p>
                 <p class="para-of-project">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis enim ut tellus elementum.</p>
@@ -120,6 +128,7 @@
 
     </main>
 
+    
   </body>
 
 </html> 

@@ -1,0 +1,74 @@
+
+.intro-section{
+  padding-top: 12%;
+}
+
+.wrapper-section-1{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 70vw;
+
+  align-items: center;
+  justify-content: center;
+  column-gap: 10em;
+  position: relative;
+}   
+
+.title-name{
+  font-family: 'notinoBAS', cursive;
+  font-size: 6em;
+  letter-spacing: 0.2em;
+}
+.profile-pic{
+  height: 50vmin;
+  width: 50vmin;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 50%;
+  border: 3px solid rgb(0,0,0);
+}
+
+.developer{
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 2.5em; 
+  position: absolute;
+  top:0;
+  right: 40%;
+  color: black;
+}
+.artist{
+  writing-mode: horizontal-tb;
+  text-orientation: upright;
+  font-size: 1em;
+  position: absolute;
+  bottom: 6%;
+  left: -60%;
+  letter-spacing:0.3em;
+  cursor: pointer;
+  transform: translateY(0.66em);
+  color: black;
+}
+.first-description{
+  font-size: 1.05em;
+}
+
+.random-grid-bg{
+  width: 10em;
+  height: 10em;
+  background-image:linear-gradient(rgb(255,255,255),rgb(247, 247, 247));
+  border: 1px solid rgb(22, 22, 22);
+  border-radius: 15px;
+}
+
+.rFromArt{
+  margin: 0;
+  padding: 0 ;
+}
+.hidden{
+  color: transparent;
+}
+.show{
+  color: black;
+}
