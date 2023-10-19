@@ -5,9 +5,6 @@
 //});
 
 
-const swup = new Swup({
-  
-});
 
 let musicNote='./PHOTOS/SVG/music-solid2.svg';
 let vinylIcon='./PHOTOS/SVG/compact-disc-solid.svg'
@@ -18,6 +15,7 @@ let buttonElementMusic=document.querySelector('.js-button-music');
 let isPlaying=false;
 let anim=gsap.to(".music-icon",{rotate:360, duration:5, repeat:-1, ease:"none", paused:true});
 let secAnim=gsap.to(".ac-music",{rotate:'15',duration:2,repeat:-1, ease:"none", yoyo:true, paused:true});
+
 let thirdAnim=gsap.from(".ac-music",{ opacity:0, paused:true, duration:0.7});
 buttonElementMusic.addEventListener("click",()=>{
   console.log('YOU PRESSED THE MUSIC');
@@ -61,3 +59,10 @@ function playAudio(){
   audioPlayer.controls=false;
   console.log('you payed the button');
 }
+
+//ANIMATIONS FOR SWITCHING WEBSITES
+let revealPage=gsap.to(".animation-over",{scaleY:0, duration:0.75, delay:0.75});
+let animObj=document.querySelector('.animation-over');
+setTimeout(()=>{
+animObj.style.display='none';
+},1510);
