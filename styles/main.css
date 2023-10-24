@@ -34,14 +34,44 @@ body:not([data-techBody]){
 a{
   text-decoration: none;
 }
-
 .animation-over{
   width: 100%;
   height: 100%;
   position: fixed;
   transform-origin: top;
-  background-color: rgb(0,0,0);
+  background-color: rgb(255, 0, 0);
   z-index: 100;
+  
+}
+.animatedStart{
+  animation: tranzSite2 0.75s ease-in-out 0.5s;
+}
+
+.animatedSec{
+  animation: tranzSite 0.75s ease-in-out 0.5s;
+}
+
+
+@keyframes tranzSite {
+  0%{
+  
+      transform: scaleY(0);
+    
+  }
+  100%{
+    transform: scaleY(1);   
+  }
+}
+
+@keyframes tranzSite2 {
+  100%{
+  
+      transform: scaleY(0);
+    
+  }
+  0%{
+    transform: scaleY(1);
+  }
 }
 main{
   display: flex;

@@ -14,13 +14,33 @@ document.body.onmousemove=(event)=>{
 textElement=document.querySelector('.random-text-bg');
 textElement.onmousemove=(event)=>{
   let fullHTML='';
-  console.log("ceva randoamsadm");
-  for(let i=1; i<=256; i++){
+
+  for(let i=1; i<=500; i++){
     const radnomNumb=Math.round(Math.random());
     fullHTML+=`${radnomNumb}`;
-    console.log(radnomNumb);
-    console.log(fullHTML);
+  
   }
   event.target.innerText =fullHTML;
-  console.log(fullHTML);
+
 };
+
+
+let home=document.getElementById('a');
+home.addEventListener("click",()=>{
+  setTimeout(()=>{
+    window.location.href="./index.html";
+  }, 5510);
+  animObj.style.transform='scale(1,0)';
+  animObj.style.backgroundColor='rgba(255,0,0,1)';
+  animObj.style.zIndex=1000;
+
+  animObj.classList.add('animatedSec');
+  setTimeout(()=>{
+    animObj.style.transform='scale(1,1)';
+  
+
+  }, 500);
+
+
+});
+

@@ -14,9 +14,6 @@
 
   <script defer src="./javascript/gsap.min.js"></script>
 
-  <!--SWUP LIBRARY FOR TRANSITIONS BETWEEN PAGES--><!--
-  <script defer src="https://unpkg.com/swup@4"></script>
--->
   <script defer src="./javascript/app.js"></script>
   <script defer src="./javascript/background-cursor.js"></script>
 </head>
@@ -29,13 +26,13 @@
     <img class="logo" src="./PHOTOS/SVG/Asset 1.svg">
 
       <div class="header-buttons">
-      <a href="./index.html">Home</a>
-      <a href="./art.html">Art</a>
-      <a href="./tech.html" id="active-button">Tech</a>
-      <a href="./contact.html">Contact</a> 
-      <audio class="main-audio" loop>
-      <source src="./randomAssets/Acejax feat. Danilyon - By My Side [NCS Release].mp3" type="audio/mp3">
-      </audio>
+        <button id="a" >Home</button>
+        <a href="./art.html">Art</a>
+        <a href="./tech.html" id="active-button">Tech</a>
+        <a href="./contact.html">Contact</a> 
+        <audio class="main-audio" loop>
+        <source src="./randomAssets/Acejax feat. Danilyon - By My Side [NCS Release].mp3" type="audio/mp3">
+        </audio>
 
       </div>
 
@@ -43,19 +40,92 @@
   </nav>
     <div class="background-gradient"></div>
     <div class="blurr-eff"></div>
-    
+
+    <div class="random-text-bg"></div>
+
 
   <main>
+
     <section class="tech-first-section"> 
 
       <div class="first-div">
-        BAIAS ANDREI
+
+        <span>BAIAS ANDREI</span>
+        <span>SILVIU</span>
+        
       </div>
+
+    </section>
+    <section class="tech-second-section"> 
+
+      <div class="second-wrapper">
+        <p class="title-section">DEVELOPER</p>
+      
+        <div class="projects-list">
+          <!--this is the first div and it should be extended-->
+          <div class="project-panel" id="active">
+            <div class="text">
+              <p class="title-of-prj">ROBOT</p>
+              <p class="description-of-prj">A small robot that can move and has an arm to catch and hold objects. It can be controlled by two people one with a keyboard and one with a joystick or in single "player" mode, just with a keyboard.</p>
+              <p class="description-of-prj">It Started as a fun idea in my head, and toghether with one of my best friends, we decided to build it. At it's core is a RaspberyPi, some motors, some servo-motors and an Arduino Uno.</p>
+            </div>
+            <div class="tech-used">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+            </div>
+          </div>
+          <div class="project-panel">
+            <div class="text">
+              <p class="title-of-prj">SITE</p>
+              <p class="description-of-prj">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu. </p>
+            </div>
+            <div class="tech-used">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+            </div>
+          </div>
+          <div class="project-panel">
+            <div class="text">
+              <p class="title-of-prj">APLICATIE</p>
+              <p class="description-of-prj">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu. </p>
+            </div>
+            <div class="tech-used">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+            </div>
+          </div>
+          <div class="project-panel">
+            <div class="text">
+              <p class="title-of-prj">JOC</p>
+              <p class="description-of-prj">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu. </p>
+            </div>
+            <div class="tech-used">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+              <img src="./PHOTOS/ambigous gradient1.png">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       
     </section>
-  
-    <div class="random-text-bg"></div>
+    <section class="tech-third-section"> 
 
+
+
+    
+      
+    </section>
+    
 
   </main>
 

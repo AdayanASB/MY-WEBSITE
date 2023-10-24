@@ -61,8 +61,20 @@ function playAudio(){
 }
 
 //ANIMATIONS FOR SWITCHING WEBSITES
-let revealPage=gsap.to(".animation-over",{scaleY:0, duration:0.75, delay:0.75});
+/*
+let tl=gsap.timeline();
+tl.to(".animation-over",{scaleY:0, duration:1.75, delay:0.75, ease:"power1.out"});
+*/
 let animObj=document.querySelector('.animation-over');
+
+
+animObj.classList.add('animatedStart');
+  
+
 setTimeout(()=>{
-animObj.style.display='none';
-},1510);
+animObj.style.backgroundColor='rgba(0,0,0,0)';
+animObj.style.zIndex=-1;
+animObj.classList.remove('animatedStart');
+animObj.style.transform='scale(1,0)';
+
+},1150);
