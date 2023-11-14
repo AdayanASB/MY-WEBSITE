@@ -36,7 +36,7 @@
 
 }
 
-.header-buttons a,.header-buttons a:link,.header-buttons a:visited{
+.header-buttons .a{
   text-decoration: none;
   color: var(--color-of-text);
   transition: all 0.25s ease;
@@ -49,13 +49,13 @@
   border: none;
 
 }
-.header-buttons a:hover{
+.header-buttons .a:hover{
   background: linear-gradient(var(--color-of-text),var(--color-of-text));
   background-size: 70% 2px;
   background-position: 50% 100%;
   background-repeat: no-repeat;
 }
-.header-buttons a:active{
+.header-buttons .a:active{
   background-color:var(--color-of-text);
   color: rgb(0, 0, 0);
 }

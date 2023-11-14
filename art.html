@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./styles/media-querryies.css">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/artist.css">
 
   
   <!--SWUP LIBRARY FOR TRANSITIONS BETWEEN PAGES-->
@@ -19,23 +20,32 @@
   <script defer src="./javascript/app.js"></script>
 </head>
 <body>
-
+  <nav>
+  <div class="animation-over"></div>
   <button class="js-button-music"><img class="ac-music" src="./PHOTOS/AC GRI.svg"><div class="rotate-wrapper"><img class="music-icon" src="./PHOTOS/SVG/compact-disc-solid.svg"></div></button>
     <div class="header">
     <img class="logo" src="./PHOTOS/SVG/Asset 1.svg">
 
     <div class="header-buttons">
-    <a href="./index.html">Home</a>
-    <a href="./art.html" id="active-button">Art</a>
-    <a href="./tech.html">Tech</a>
-    <a href="./contact.html">Contact</a> 
-    <audio class="main-audio" loop>
-    <source src="./randomAssets/Acejax feat. Danilyon - By My Side [NCS Release].mp3" type="audio/mp3">
-    </audio>
+      <button class="a" data-links="index.html">Home</button>
+      <button class="a" data-links="art.html"  id="active-button">Art</button>
+      <button class="a" data-links="tech.html">Tech</button>
+      <button class="a" data-links="contact.html">Contact</a> 
+      <audio class="main-audio" loop>
+      <source src="./randomAssets/Acejax feat. Danilyon - By My Side [NCS Release].mp3" type="audio/mp3">
+      </audio>
 
     </div>
 
 
   </div>
+  </nav>
+  <main>
+    <div class="main-grid">
+      <img class="photo-art" src="./PHOTOS/_MG_6638.jpg">
+    </div>
+  </main>
+
+
 </body>
 </html>

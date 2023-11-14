@@ -1,0 +1,10 @@
+.mian-grid{
+  display: grid;
+  grid-template-columns: repeat(minmax(200px, 1fr), 8);
+}
+.tall{
+  
+}
+.wide{
+
+}

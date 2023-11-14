@@ -23,24 +23,3 @@ textElement.onmousemove=(event)=>{
   event.target.innerText =fullHTML;
 
 };
-
-
-let home=document.getElementById('a');
-home.addEventListener("click",()=>{
-  setTimeout(()=>{
-    window.location.href="./index.html";
-  }, 5510);
-  animObj.style.transform='scale(1,0)';
-  animObj.style.backgroundColor='rgba(255,0,0,1)';
-  animObj.style.zIndex=1000;
-
-  animObj.classList.add('animatedSec');
-  setTimeout(()=>{
-    animObj.style.transform='scale(1,1)';
-  
-
-  }, 500);
-
-
-});
-

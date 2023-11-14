@@ -11,6 +11,10 @@
 *{
   margin: 0;
 }
+:root{
+  --anim-duration:0.75s;
+  --anim-delay:0.5s;
+}
 html{
   font-family: Raleway;
   height: 100%;
@@ -39,16 +43,16 @@ a{
   height: 100%;
   position: fixed;
   transform-origin: top;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0);
   z-index: 100;
   
 }
 .animatedStart{
-  animation: tranzSite2 0.75s ease-in-out 0.5s;
+  animation: tranzSite2 var(--anim-duration) ease-in-out var(--anim-duration);
 }
 
 .animatedSec{
-  animation: tranzSite 0.75s ease-in-out 0.5s;
+  animation: tranzSite var(--anim-duration) ease-in-out var(--anim-delay);
 }
 
 
