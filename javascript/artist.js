@@ -1,7 +1,8 @@
+  /*
   console.log('{');
   let photoGrid=document.querySelector('.main-grid');
   let temporHTML='';
-  for(let i=1;i<=163;i++){
+  for(let i=1;i<163;i++){
     temporHTML+=`<img loading="lazy" class="photo-art" src="./PHOTOS/PORTFOLIO/1 (${i}).jpg">
     `;
   }  
@@ -36,4 +37,4 @@ function randomClass(imgObj){
 }
 
 
-console.log('}');
+console.log('}');*/
