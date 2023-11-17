@@ -5,10 +5,10 @@
   let temporHTML='';
 
     for(let i=1;i<163;i++){
-      temporHTML+=`<img loading="lazy" class="photo-art"  src="./PHOTOS/PORTFOLIO/1 (${i}).jpg" data-tilt data-index="${i-1}" data-tilt-scale="1.2" id="${i-1}">
+      temporHTML+=`<img loading="lazy" class="photo-art"  src="./PHOTOS/PORTFOLIO/1 (${i}).jpg" data-tilt data-index="${i-1}" data-tilt-scale="1.3" id="${i-1}">
       `;
     }  
-  
+    
     //temporary grid generator
   photoGrid.innerHTML=temporHTML;
   let photoObj=document.querySelectorAll(".photo-art");
@@ -32,9 +32,39 @@
       
       }
     }
+    
+
   });
-  
-  
+  document.addEventListener('scroll',()=>{
+    let randNumber=Math.random()*10;
+    if(randNumber<1){
+      document.querySelectorAll('.photo-art').forEach((elem,index)=>{
+        fixedUpdate(elem);
+      });
+    }
+    
+    
+  });
+  function fixedUpdate(elems){
+    //vector3.forward() 
+    // == miscarea rectilinie uniforma
+    let varXY=  elems.getBoundingClientRect();
+    let convertedPercentage=varXY.top*100/(window.innerHeight+varXY.height)
+    if(varXY.top>window.innerHeight-varXY.height &&varXY.top<window.innerHeight+varXY.height){
+      elems.animate({objectPosition:`center ${convertedPercentage}%`},{duration:2100, fill:'forwards'});
+      console.log('A INTRAT IN IFFFF');
+    } 
+  }
+
+  //start anim when bottom = -height of element
+  //end anim when bottom =height of screen
+  //convert (current bottom)*100/(1080px +height of elem )
+
+
+
+
+
+
   //display generated grid
   
   

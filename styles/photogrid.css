@@ -21,7 +21,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: all ease-in-out 0.1s ;
 
 }
 .photo-art:hover{
