@@ -3,7 +3,7 @@
   
   let photoGrid=document.querySelector('.main-grid');
   let temporHTML='';
-  setTimeout(()=>{
+
     for(let i=1;i<163;i++){
       temporHTML+=`<img loading="lazy" class="photo-art"  src="./PHOTOS/PORTFOLIO/1 (${i}).jpg" data-tilt data-index="${i-1}" data-tilt-scale="1.2" id="${i-1}">
       `;
@@ -38,7 +38,7 @@
   //display generated grid
   
   
-  }, 1000);
+
   
   
   function randomClass(imgObj){
