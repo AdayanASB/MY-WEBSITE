@@ -106,3 +106,26 @@ html.is-animating .transition-fade {
     place-content: center;
   }
 }
+.footer{
+  color: white;
+  width: 100%;
+  height: 10em;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}/*
+.footer div:not(.grid){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+*/
+.grid{
+  width: 70%;
+  grid-template-columns: 1.5fr 1fr 1fr 2fr;
+} 

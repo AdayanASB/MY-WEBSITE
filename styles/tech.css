@@ -61,9 +61,6 @@ body::-webkit-scrollbar {
   height: 100%;
   overflow: hidden;
 }
-.swup-transition-overlay {
-  background:black;
-}
 .tech-first-section{
   margin-top: 15%;
   pointer-events: none;
@@ -123,12 +120,12 @@ body::-webkit-scrollbar {
 
 .tech-second-section{
   margin-top: 30%;
-  height: 100vh;
-  width: 70%;
-  border: 1px solid rgb(0, 255, 0);
+
+  width: 80%;
+
   border-radius: 1em;
   box-sizing: border-box;
-
+  padding: 0 2em;
   
 
 }
@@ -147,40 +144,56 @@ body::-webkit-scrollbar {
 .second-wrapper .title-section{
   font-size: 5em;
   font-family: "minecraft";
+  padding: 1em;
 }
 .projects-list{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:grid;
+  grid-template-columns: repeat(clamp(1,3,5),clamp(250px, 50%, 350px));
   width: 100%;
-  flex-direction: column;
+  grid-auto-rows: 550px;
   row-gap: 1em;
+  column-gap: 2em;
   box-sizing: border-box;
 }
 .project-panel{
-  width: 80%;
-  min-height: 4em;
+  transform-style: preserve-3d;
   border: 1px solid rgb(0, 255, 0);
   border-radius: 2em;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1em 1.5em;
+  justify-content: space-around;
+
   background-color: rgba(0, 0, 0, 0.696);
   box-sizing: border-box;
   cursor: pointer;
+
+}
+.project-panel:hover{
+  z-index: 10;
+}
+.project-panel .project-photo{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 200px;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
 }
 .project-panel .text{
-  flex: 1;
+  margin-top: 100px;
+  padding: 1em 1.5em;
+  transform: translateZ(50px);
+
   display: flex;
   flex-direction: column;
   row-gap: 0.5em;
   align-items: start;
 }
-.project-panel:not(#active) .text .description-of-prj{
-  display: none;
-}
-.project-panel:not(#active) .tech-used{
+
+.project-panel .tech-used{
+  transform: translateZ(50px);
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
