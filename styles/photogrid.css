@@ -1,4 +1,6 @@
-
+html{
+  scroll-behavior: smooth;
+}
 .main-grid{
   width: 70%;
   display: grid;

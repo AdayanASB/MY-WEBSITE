@@ -1,6 +1,6 @@
   
   let currLayout=[];
-  
+  console.log(window.innerHeight);
   let photoGrid=document.querySelector('.main-grid');
   let temporHTML='';
 
@@ -35,24 +35,37 @@
     
 
   });
-  document.addEventListener('scroll',()=>{
-    let randNumber=Math.random()*10;
+  callingStuff();
+  document.onscroll=()=>{
+  
+      callingStuff();
+    
+  };
+  function callingStuff(){
+    let randNumber=Math.random();
     if(randNumber<1){
       document.querySelectorAll('.photo-art').forEach((elem,index)=>{
         fixedUpdate(elem);
       });
     }
-    
-    
-  });
+  }
   function fixedUpdate(elems){
     //vector3.forward() 
     // == miscarea rectilinie uniforma
     let varXY=  elems.getBoundingClientRect();
-    let convertedPercentage=varXY.top*100/(window.innerHeight+varXY.height)
-    if(varXY.top>window.innerHeight-varXY.height &&varXY.top<window.innerHeight+varXY.height){
-      elems.animate({objectPosition:`center ${convertedPercentage}%`},{duration:2100, fill:'forwards'});
-      console.log('A INTRAT IN IFFFF');
+    console.log(varXY);
+    let convertedPercentage=varXY.y*100/(window.innerHeight+varXY.height);
+    /*
+    if(convertedPercentage<40){
+      convertedPercentage=40;
+    }
+    if(convertedPercentage>60){
+      convertedPercentage=60;
+    }*/
+    console.log(convertedPercentage);
+    if(varXY.y<window.innerHeight+varXY.height &&varXY.y>-varXY.height){
+      elems.animate({objectPosition:`center ${convertedPercentage}%`},{duration:500, fill:'forwards'});
+
     } 
   }
 
@@ -72,16 +85,16 @@
   
   
   function randomClass(imgObj){
-    let randomNumb=Math.random()*19 ;
+    let randomNumb=Math.random()*20 ;
     if(randomNumb<1){
       imgObj.classList.add('tall');
       currLayout.push('tall');
     }
-     else if(randomNumb>=1 && randomNumb<3){
+     else if(randomNumb>=1 && randomNumb<2){
       imgObj.classList.add('wide');
       currLayout.push('wide');
     }
-   else  if(randomNumb>=4 && randomNumb<5.5){
+   else  if(randomNumb>=4 && randomNumb<6){
       imgObj.classList.add('wide');
       imgObj.classList.add('tall');
       currLayout.push('tall wide');
