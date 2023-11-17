@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="./styles/third-section.css">
     <link rel="stylesheet" href="./styles/header.css">
 
-
-    <!--SWUP LIBRARY FOR TRANSITIONS BETWEEN PAGES-->
-    <script defer src="https://unpkg.com/swup@4"></script>
-
     <!--GSAP FOR BASIC ANIMATIONS-->
     <script defer src="./javascript/gsap.min.js"></script>
     <!--JQUERRY FOR SELECTING CHILD WITH TEXT-->
@@ -52,8 +48,8 @@
       <section class="intro-section">
         <div class="wrapper-section-1">
           <div class="text-s1">
-            <p class="title-name">BAIAS ANDREI SILVIU</p>                        
-            <div onclick="window.location.href = './tech.html';" class="developer js-dev-text" data-text-main="DEVELOPER" id="1">DEVELOPER <a href="./art.html" class="artist" id="2"><span>A</span><span class="rFromArt show">R</span><span>T</span><span>I</span><span>S</span><span>T</span></a></div>
+            <p class="title-name">BAIAS ANDREI SILVIU</p><!--NEED TO RETHINK DEVELOPER AND ARTIST TO WORK WITH TRANSITIONS-->                        
+            <div class="developer js-dev-text a" data-links="tech.html" data-text-main="DEVELOPER" id="1">DEVELOPER <div class="artist a" id="2" data-links="art.html"><span>A</span><span class="rFromArt show">R</span><span>T</span><span>I</span><span>S</span><span>T</span></div></div>
             <p class="first-description">Hey! My name is Baias Andrei Silviu and I am a developer and an artist based in Romania with experience ranging from prototyping robots to playing the guitar!</p> 
           </div>
           <img src="./PHOTOS/_MG_6638.jpg" class="profile-pic">

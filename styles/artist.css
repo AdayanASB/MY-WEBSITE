@@ -1,43 +1,4 @@
 
-.main-grid{
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(clamp(2, 5, 9), minmax(200px,500px));
-  gap: 10px;
-  grid-auto-rows: 200px;
-  
-}
-.tall{
-  grid-row: span 2;
-}
-
-.wide{
-  grid-column: span 2;
-}
-.photo-art{
-  width:100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: all ease-in-out 0.1s ;
-
-}
-.photo-art:hover{
-  transform: scale(1.5);
-  
-}
-
-main{
-  padding-top: 200px;
-}
-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
 
 .s1-card{
   width: clamp(150px, 300px, 500px);
@@ -82,4 +43,15 @@ section{
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+#galery-but{
+  padding:0.5em 1em;
+  background-color: rgba(0,0,0,0);
+  border: 2px solid rgb(0, 0, 0);
+  transition: all 0.2s;
+}
+#galery-bud:hover{
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.5);
 }
