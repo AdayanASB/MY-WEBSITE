@@ -1,15 +1,4 @@
-const lenis = new Lenis()
 
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
   let currLayout=[];
   console.log(window.innerHeight);
   let photoGrid=document.querySelector('.main-grid');
