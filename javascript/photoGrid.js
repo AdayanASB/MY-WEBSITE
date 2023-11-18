@@ -1,4 +1,15 @@
-  
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
   let currLayout=[];
   console.log(window.innerHeight);
   let photoGrid=document.querySelector('.main-grid');
@@ -55,13 +66,13 @@
     let varXY=  elems.getBoundingClientRect();
     console.log(varXY);
     let convertedPercentage=varXY.y*100/(window.innerHeight+varXY.height);
-    /*
-    if(convertedPercentage<40){
-      convertedPercentage=40;
+    
+    if(convertedPercentage<20){
+      convertedPercentage=20;
     }
     if(convertedPercentage>60){
       convertedPercentage=60;
-    }*/
+    }
     console.log(convertedPercentage);
     if(varXY.y<window.innerHeight+varXY.height &&varXY.y>-varXY.height){
       elems.animate({objectPosition:`center ${convertedPercentage}%`},{duration:500, fill:'forwards'});
