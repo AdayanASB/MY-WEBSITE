@@ -10,7 +10,9 @@ section{
 }
 
 .s1-card{
-  width: clamp(150px, 300px, 500px);
+  width: clamp(270px, 300px, 500px);
+  min-width: 270px;
+  max-width: 500px;
   height: 500px;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
@@ -40,6 +42,7 @@ section{
   gap: 50px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .title-artist{
   font-size:3em;
