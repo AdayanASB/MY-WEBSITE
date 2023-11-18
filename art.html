@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./styles/header.css">
   <link rel="stylesheet" href="./styles/artist.css">
 
-
+  <script defer src="./javascript/vanilla-tilt.js"></script>
   <script defer src="./javascript/artist.js"></script>
   <script src="./javascript/gsap.min.js"></script>s
   <script defer src="./javascript/app.js"></script>
@@ -43,39 +43,38 @@
     <section>
       <div class="title-artist">ARTIST</div>
       <div class="cards-main-wrapper">
-        <div class="card-wrapper">
-          <div class="s1-card">
-            <img  class="card-img" src="./PHOTOS/PORTFOLIO/1 (131).jpg">
-            <div class="s1-text">
-              <p class="card-title">GUITAR PLAYER</p>
-              <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis enim</p>
-              <button class="a" id="galery-but" data-links="photogrid.html">FOTO GALERY</button>
-            </div>
+        <div class="s1-card" data-tilt  data-tilt-max="5">
+          <img  class="card-img" src="./PHOTOS/PORTFOLIO/1 (131).jpg">
+          <p class="card-title">GUITAR PLAYER</p>
+          <div class="s1-text">
+            
+            <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis enim</p>
+            <button class="a" id="galery-but" data-links="photogrid.html">FOTO GALERY</button>
+          </div>
         </div>
-      </div>
-        <div class="card-wrapper">
-          <div class="s1-card">
-            <img  class="card-img" src="./PHOTOS/_MG_2490-2.jpg">
-            <div class="s1-text">
-              <p class="card-title">photographer</p>
-              <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis enim</p>
-              <button class="a" id="galery-but" data-links="photogrid.html">FOTO GALERY</button>
-            </div>
-        </div>
-      </div>
-        <div class="card-wrapper">
-          <div class="s1-card">
-            <img  class="card-img" src="./PHOTOS/_MG_2490-2.jpg">
-            <div class="s1-text">
-              <p class="card-title">VIDEOGRAPHER</p>
-              <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis enim</p>
-              <button class="a" id="galery-but" data-links="photogrid.html">FOTO GALERY</button>
-            </div>
-        </div>
-      </div>
-      </div>
     
-      
+        <div class="s1-card" data-tilt  data-tilt-max="5">
+          <img  class="card-img" src="./PHOTOS/_MG_2490-2.jpg">
+          <p class="card-title">PHOTOGRAPHER</p>
+          <div class="s1-text">
+            <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis enim</p>
+            <button class="a" id="galery-but" data-links="photogrid.html">FOTO GALERY</button>
+          </div>
+        </div>
+
+        <div class="s1-card" data-tilt  data-tilt-max="5">
+          <img  class="card-img" src="./PHOTOS/PORTFOLIO/1 (81).jpg" id="pic3">
+          <p class="card-title">VIDEOGRAPHER</p>
+          <div class="s1-text">
+          
+            <p class="card-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa enim nec dui nunc mattis enim</p>
+            <button class="a" id="galery-but" data-links="photogrid.html">FOTO GALERY</button>
+          </div>
+      </div>
+
+      </div>
+     
+    </section>  
     
   
   </main>
