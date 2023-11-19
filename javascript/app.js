@@ -9,6 +9,7 @@ let isPlaying=false;
 let anim=gsap.to(".music-icon",{rotate:360, duration:5, repeat:-1, ease:"none", paused:true});
 let secAnim=gsap.to(".ac-music",{rotate:'15',duration:2,repeat:-1, ease:"none", yoyo:true, paused:true});
 
+//music player functions
 let thirdAnim=gsap.from(".ac-music",{ opacity:0, paused:true, duration:0.7});
 buttonElementMusic.addEventListener("click",()=>{
   console.log('YOU PRESSED THE MUSIC');
@@ -51,6 +52,7 @@ function playAudio(){
   console.log('you payed the button');
 }
 
+//main transition between pages
 let animationDuration=600;
 let animDelay=250;
 r.style.setProperty('--anim-duration',`${animationDuration/1000}s`);
@@ -67,6 +69,7 @@ animObj.style.transform='scale(1,0)';
 
 },(animationDuration+animDelay+100));
 
+//function for all nav elements (tech/artist/contact/home) 
 let headerElements=document.querySelectorAll('.a').forEach((buttons)=>{
 
   buttons.addEventListener("click",()=>{
@@ -85,3 +88,48 @@ let headerElements=document.querySelectorAll('.a').forEach((buttons)=>{
   });
   
 });
+
+
+//object with tech used (svgs) and their description
+
+const techUsed=[
+{
+src:'./PHOTOS/SVG/techUsed/androidstudioFIN.svg',
+description:'Android Studio'
+},
+{
+src:'./PHOTOS/SVG/techUsed/arduinoFIN.svg',
+description:'Arduino'
+},
+{
+src:'./PHOTOS/SVG/techUsed/htmlFIN.svg',
+description:'HTML'
+},
+{
+src:'./PHOTOS/SVG/techUsed/javaFIN.svg',
+description:'Java'
+},
+{
+src:'./PHOTOS/SVG/techUsed/javascriptFIN.svg',
+description:'Javascript'
+},
+{
+src:'./PHOTOS/SVG/techUsed/cssFIN.svg',
+description:'CSS'
+},
+{
+src:'./PHOTOS/SVG/techUsed/pythonFIN.svg',
+description:'Python'
+},
+{
+src:'./PHOTOS/SVG/techUsed/unityFIN.svg',
+description:'Unity'
+},
+{
+src:'./PHOTOS/SVG/techUsed/vscodeFIN.svg',
+description:'VSCode'
+},
+{
+src:'./PHOTOS/SVG/techUsed/githubFIN.svg',
+description:'GitHub'
+}];

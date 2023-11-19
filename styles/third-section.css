@@ -34,6 +34,7 @@
 }
 .random-prj{
   width: 100%;
+  min-width: 250px;
   height: 30vh;
   position: relative;
   border: none;
@@ -50,7 +51,7 @@
   background-color: white;
   border: 1px solid black;
   border-radius: 2em;
-  
+  cursor: pointer;
 }
 .overAnything{
   height: 95%;
@@ -125,3 +126,7 @@
   }
 }
 
+.click-more{
+  font-size: 0.8em;
+  color: rgb(73, 73, 73);
+}
