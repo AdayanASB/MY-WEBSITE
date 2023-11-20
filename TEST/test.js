@@ -35,3 +35,10 @@ let headerElements=document.querySelectorAll('.a').forEach((buttons)=>{
   });
   
 });
+
+
+let checkbox=document.querySelector('.fortnicte');
+checkbox.addEventListener('change',(event)=>{
+  console.log(event.target.value);
+  let value=document.querySelector('.show-value').innerHTML=`value:${event.target.value} `;
+});
