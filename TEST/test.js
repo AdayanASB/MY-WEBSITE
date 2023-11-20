@@ -42,3 +42,4 @@ checkbox.addEventListener('change',(event)=>{
   console.log(event.target.value);
   let value=document.querySelector('.show-value').innerHTML=`value:${event.target.value} `;
 });
+let a='a';
