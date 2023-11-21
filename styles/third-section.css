@@ -131,9 +131,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .max-height-icon{
   height: 2em;
+}
+#iconsX2{
+  justify-content: center;
+  gap: 1em;
+}
+.used-tech .img-container{
+  position: relative;
+}
+.used-tech .img-container p{
+  position: absolute;
+  opacity: 0;
+  bottom: -70%;
+  left:-10%;
+  font-size: 0.5em;
+  transition: all 0.2s ease-in-out ;
+  background-color: rgb(38, 38, 38);
+  color: white;
+  padding: 5px 5px; 
+  border-radius: 10px;  
+
+}
+.used-tech .img-container:hover p{
+  opacity: 1;
 }
 
 #a1{

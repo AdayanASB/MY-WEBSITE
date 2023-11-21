@@ -20,13 +20,6 @@ html{
   height: 100%;
   width: 100%;
 }
-html.is-changing .transition-fade{
-  transition: opacity 2.25s;
-  opacity: 1;
-}
-html.is-animating .transition-fade{
-  opacity: 0;
-}
 body:not([data-techBody]){
   position: relative;
   background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0);

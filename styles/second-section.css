@@ -19,6 +19,7 @@ align-items: center;
   border: none;
   border-radius: 1em;
   position: relative;
+
 }
 .rotating-dev-artist{
   position: absolute;
@@ -66,6 +67,7 @@ border-radius: 50%;
   flex-direction: column;
   transition: all 0.25s ease-in-out;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .developer-about-me:hover{
@@ -187,5 +189,14 @@ background-color: rgba(0, 0, 0, 0.08);
   }
   .about-dev{
     padding: 1em 1em 1.5em 1em;
+  }
+}
+@media screen and(max-width:520px) {
+  .rotating-dev-artist{
+    display: none;
+
+  }
+  .rotating-dev-artist2{
+    display: none;
   }
 }

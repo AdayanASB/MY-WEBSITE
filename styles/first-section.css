@@ -72,3 +72,40 @@
 .show{
   color: black;
 }
+
+
+@media screen and (max-width:1100px) {
+  .wrapper-section-1{
+    column-gap: 0;
+    grid-template-columns:2fr 1fr;
+  }
+  .developer{
+    display: none;
+  }
+}
+@media screen and (max-width:900px) {
+  .wrapper-section-1{
+    grid-template-columns:none;
+    justify-items: center;
+    place-content: center;
+  }
+  .title-name{
+    font-size: minmax(2em,4em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .profile-pic{
+    width: minmax(7em,15em);
+    height: minmax(7em,15em);
+  }
+}
+@media screen and (max-width:520px) {
+  .title-name{
+    font-size: 4em;
+  }
+  .js-button-music{
+    display: none;
+  }
+}
