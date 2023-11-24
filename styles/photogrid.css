@@ -98,3 +98,7 @@ body{
 .show-olx{
   margin-top: 250px;
 }
+/* MAKE RESPONSIVE GRID  */
+@media screen and (max-width:100px) {
+
+}
