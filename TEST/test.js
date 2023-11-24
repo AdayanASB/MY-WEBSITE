@@ -43,3 +43,55 @@ checkbox.addEventListener('change',(event)=>{
   let value=document.querySelector('.show-value').innerHTML=`value:${event.target.value} `;
 });
 let a='a';
+
+let olxElement=document.querySelector('.olx-display');
+let olxPhotoElem=document.querySelector('.img-holder');
+let backButton=document.querySelector('.back-button');
+backButton.addEventListener('click',()=>{
+
+    hideOlx();
+    olxElement.style.zIndex=-1;
+  
+  
+});
+let showOlxButton=document.querySelector('.show-olx');
+showOlxButton.addEventListener('click',()=>{
+    showOlx();
+    olxElement.style.zIndex=10000;
+});
+
+let nextPhtButt=document.querySelector('.right-arr');
+nextPhtButt.addEventListener("click", ()=>{
+
+});
+
+let lastPhtButt=document.querySelector('.left-arr');
+nextPhoto.addEventListener("click",()=>{
+
+});
+/*
+r.style.setProperty('--anim-duration',`${animationDuration/1000}s`);*/
+
+/*  --display-pr-olx:flex;
+  --lock-scroll:visible;
+  --display-header:flex;
+  */
+
+function showOlx(){
+  r.style.setProperty('--display-pr-olx','flex');
+  r.style.setProperty('--lock-scroll','hidden');
+  r.style.setProperty('-display-header','0');
+
+}
+function hideOlx(){
+  r.style.setProperty('--display-pr-olx','none');
+  r.style.setProperty('--lock-scroll','visible');
+  r.style.setProperty('--display-header','1');
+}
+function updateOlxPhoto(photoIndex){
+  olxPhotoElem.innerHTML=`<img src="./PHOTOS/PORTFOLIO/1 (${photoIndex+1}).jpg">`;
+}
+function changePhoto(pozaCurenta){
+  
+}
+

@@ -1,6 +1,7 @@
 
   let currLayout=[];
-  console.log(window.innerHeight);
+
+  let olxElement=document.querySelector('.olx-display');
   let photoGrid=document.querySelector('.main-grid');
   let temporHTML='';
 
@@ -32,8 +33,14 @@
       
       }
     }
-    
+    let elemIndex=element.dataset.index;
+    element.addEventListener('click',()=>{
+        console.log(elemIndex)
+        
+      updateOlxPhoto(elemIndex);
+      showOlx();
 
+    });
   });
   callingStuff();
   document.onscroll=()=>{
@@ -53,7 +60,6 @@
     //vector3.forward() 
     // == miscarea rectilinie uniforma
     let varXY=  elems.getBoundingClientRect();
-    console.log(varXY);
     let convertedPercentage=varXY.y*100/(window.innerHeight+varXY.height);
     
     if(convertedPercentage<20){
@@ -62,7 +68,7 @@
     if(convertedPercentage>60){
       convertedPercentage=60;
     }
-    console.log(convertedPercentage);
+  
     if(varXY.y<window.innerHeight+varXY.height &&varXY.y>-varXY.height){
       elems.animate({objectPosition:`center ${convertedPercentage}%`},{duration:500, fill:'forwards'});
 
@@ -104,3 +110,68 @@
     }
   
   }
+
+
+
+  //preview galery on by one 
+  
+let olxPhotoElem=document.querySelector('.img-holder');
+let backButton=document.querySelector('.back-button');
+backButton.addEventListener('click',()=>{
+
+    hideOlx();
+    olxElement.style.zIndex=-1;
+  
+  
+});
+
+let nextPhtButt=document.querySelector('.right-arr');
+nextPhtButt.addEventListener("click", ()=>{
+  let indeX=(Number(olxPhotoElem.dataset.index)+1)%162;
+  updateOlxPhoto(indeX);
+});
+
+let lastPhtButt=document.querySelector('.left-arr');
+lastPhtButt.addEventListener("click",()=>{
+
+  let indeX=(Number(olxPhotoElem.dataset.index)-1)%162;
+ if(indeX<0){
+  indeX=161;
+ }
+  console.log(indeX);
+  console.log(typeof indeX);
+  updateOlxPhoto(indeX);
+
+});
+/*
+r.style.setProperty('--anim-duration',`${animationDuration/1000}s`);*/
+
+/*  --display-pr-olx:flex;
+  --lock-scroll:visible;
+  --display-header:flex;
+  */
+
+function showOlx(){
+  r.style.setProperty('--display-pr-olx','flex');
+  r.style.setProperty('--lock-scroll','hidden');
+  r.style.setProperty('--display-header','0');
+  r.style.setProperty('--header-index', '-1');
+  photoGrid.style.zIndex=-1;
+  olxElement.style.zIndex=100;
+}
+function hideOlx(){ 
+  r.style.setProperty('--display-pr-olx','none');
+  r.style.setProperty('--lock-scroll','visible');
+  r.style.setProperty('--display-header','1');
+  r.style.setProperty('--header-index', '10');
+  olxPhotoElem.innerHTML='';
+  olxElement.style.zIndex=-1
+  photoGrid.style.zIndex=100;
+}
+function updateOlxPhoto(photoIndex){
+  photoIndex =Number(photoIndex);
+
+  olxPhotoElem.innerHTML=`<img src="./PHOTOS/PORTFOLIO/1 (${photoIndex+1}).jpg" class="olx-image" data-index=${photoIndex}>`;
+  olxPhotoElem.dataset.index=photoIndex;
+}
+

@@ -84,21 +84,6 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
-@media screen and (max-width:1100px) {
-  .wrapper-section-1{
-    column-gap: 0;
-  }
-  .developer{
-    display: none;
-  }
-}
-@media screen and (max-width:900px) {
-  .wrapper-section-1{
-    grid-template-columns: none;
-    grid-template-rows: 2fr 1fr;
-    place-content: center;
-  }
-}
 .footer{
   color: white;
   width: 100%;

@@ -55,6 +55,9 @@
   transition: all 0.3s ease-in-out; 
   cursor: pointer;
 }
+.random-prj .title-of-project{
+  font-weight: 600;
+}
 .overAnything{
   height: 95%;
   width: 95%;
