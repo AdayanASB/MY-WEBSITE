@@ -25,7 +25,6 @@
   display: flex;
   max-width: 20em;
   justify-content: space-evenly;
-  column-gap: 1em;
   align-items: center;
   padding-right: 1em;
   color:black;

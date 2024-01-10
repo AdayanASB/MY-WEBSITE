@@ -59,16 +59,6 @@ section{
   transition: all 0,2s ease-in-out;
   
 }
-.title-artist:hover{/*
-  background: linear-gradient(-45deg,rgb(250, 190, 255), rgb(99, 24, 117),rgb(250, 190, 255));
-  animation: backg-move1 3s ease-in-out 0s infinite;
-  background-position: 50% 50%;
-  background-size: 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;*/
-
-}
 .s1-text{
   display: flex;
   flex-direction:column;
@@ -126,8 +116,6 @@ section{
 .left-line,.right-line{
   width:60vw;
   height: 5px;
-
-  position: absolute;
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
   background-color: black;
@@ -139,22 +127,17 @@ section{
   border: 1px solid black;
 }
 .left-line{
-  top: -20%;
-  left: -50%;
 
+  transform: translateY(-150%);
 }
 .title-artist:hover .left-line{
-  transform: translateX(-20%);
+  transform: translate3d(-20%,-150%,0);
+  
 }
 .title-artist:hover .right-line{
-  transform: translateX(20%);
+  transform: translate3d(20%, 150%,0);
 }
 .right-line{
-  bottom: -20.5%;
-  right: -50%;
 
-}
-
-body{
-  overflow-x: hidden;
+  transform: translateY(150%);
 }

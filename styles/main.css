@@ -26,6 +26,7 @@ body:not([data-techBody]){
   background-size: 40px 40px;
   background-position: -1%;
   height: 100%;
+  overflow-x: hidden;
   width: 100%;
 }
 a{
