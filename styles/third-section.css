@@ -201,3 +201,18 @@ grid-row: span 2;
   }
   
 }
+
+@media screen and (max-width:550px) {
+    .used-tech{
+      display: none;
+    }
+} 
+@media screen and (max-width:350px) {
+  .third-wrapper{
+    width:auto;
+  }
+  .my-projects-title{
+    font-size: 2em;
+    text-align: center;
+  }
+}

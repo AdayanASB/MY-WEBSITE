@@ -192,7 +192,7 @@ section{
   top: 0;
 }
 .project-panel .text{
-  margin-top: 100px;
+  margin-top: 1em;
   padding: 1em 1.5em;
   transform: translateZ(50px);
 
@@ -216,6 +216,15 @@ section{
   border: 1px solid rgb(0, 255, 0);
   border-radius:50% ;
   width: 3em ;
+}
+
+#brain span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border: 1px solid rgb(0, 255, 0);
+  border-radius:1em ;
 }
 .project-panel .title-of-prj{
   font-size: 2em;

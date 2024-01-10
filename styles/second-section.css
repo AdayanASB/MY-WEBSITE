@@ -84,14 +84,6 @@ border-radius: 50%;
 .artist-about-me:hover{
   box-shadow: 0em 0em 2em rgba(250, 30, 255,0.5);
 }
-@keyframes backg-move1 {
-  from{
-    background-position: 0;
-  }
-  to{
-    background-position: 200%;
-  }
-}
 
 @keyframes backg-move2 {
   from{
@@ -191,12 +183,23 @@ background-color: rgba(0, 0, 0, 0.08);
     padding: 1em 1em 1.5em 1em;
   }
 }
-@media screen and(max-width:520px) {
+@media screen and (max-width:520px) {
   .rotating-dev-artist{
     display: none;
 
   }
   .rotating-dev-artist2{
     display: none;
+    animation: none;
+  }
+}
+@media screen and (max-width:350px) {
+  .developer-title{
+    letter-spacing: normal;
+  }
+}
+@media screen and (max-width:400px) {
+  .about-me-title{
+    font-size: 3em;
   }
 }

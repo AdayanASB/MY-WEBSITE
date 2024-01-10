@@ -11,6 +11,8 @@
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  width: 100%;
+
 }
 .logo{
   display: inline;
@@ -19,13 +21,13 @@
 }
 .header-buttons{
   flex: 1;
-  margin-right: 2em;
+
   display: flex;
   max-width: 20em;
   justify-content: space-evenly;
   column-gap: 1em;
   align-items: center;
-  padding-right: 2em;
+  padding-right: 1em;
   color:black;
 
 }
@@ -103,4 +105,18 @@
   object-fit: contain;
   transform-origin: top center;
 
+}
+
+@media screen and (max-width:450PX) {
+  .logo{
+    display: none;
+  }
+  .js-button-music{
+    display: none;
+  }
+  .header-buttons{
+    margin-right: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
 }

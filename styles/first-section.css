@@ -78,6 +78,7 @@
   .wrapper-section-1{
     column-gap: 0;
     grid-template-columns:2fr 1fr;
+    row-gap: 15px;
   }
   .developer{
     display: none;
@@ -108,4 +109,22 @@
   .js-button-music{
     display: none ;
   }
+}
+@media screen and (max-width:350px) {
+  .title-name{
+    font-size: 3.5em;
+  }
+  .wrapper-section-1{
+  
+  
+    row-gap: 30px;
+  }
+  .first-description{
+    padding-top: 10px;
+  }
+  .text-s1{
+    padding-top: 45px;
+  }
+  
+  
 }

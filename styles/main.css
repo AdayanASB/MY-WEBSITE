@@ -17,9 +17,9 @@
 }
 html{
   font-family: Raleway;
-  height: 100%;
-  width: 100%;
-}
+  width: 100vw; box-sizing: border-box;
+
+  display: inline-block}
 body:not([data-techBody]){
   position: relative;
   background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0);
@@ -92,7 +92,7 @@ html.is-animating .transition-fade {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  display: none;
 
 }/*
 .footer div:not(.grid){
@@ -107,3 +107,11 @@ html.is-animating .transition-fade {
   width: 70%;
   grid-template-columns: 1.5fr 1fr 1fr 2fr;
 } 
+@keyframes backg-move1 {
+  from{
+    background-position: 0;
+  }
+  to{
+    background-position: 200%;
+  }
+}

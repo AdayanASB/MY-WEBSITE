@@ -114,3 +114,11 @@
   transform-origin: top center;
 
 }
+@media screen and (max-width:450PX) {
+  .logo{
+    display: none;
+  }
+  .js-button-music{
+    display: none;
+  }
+}
