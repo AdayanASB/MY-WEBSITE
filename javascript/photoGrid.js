@@ -17,16 +17,16 @@
     
     randomClass(element);
     for(i=0;i<alwaysSame.length;i++){
-      if(index===alwaysSame[i].pos){
+      if(index===alwaysSame[i].pos && window.innerWidth>1100){
         element.classList.remove('tall');
         element.classList.remove('wide');
-        if(alwaysSame[i].classes==='tall'){
+        if(alwaysSame[i].classes==='tall' && window.innerWidth>1100){
           element.classList.add('tall');
         }
-        else if(alwaysSame[i].classes==='wide'){
+        else if(alwaysSame[i].classes==='wide' && window.innerWidth>1100){
           element.classList.add('wide');
         }
-        else if(alwaysSame[i].classes==='tall wide'){
+        else if(alwaysSame[i].classes==='tall wide' && window.innerWidth>1100){
           element.classList.add('wide');
           element.classList.add('tall');
         }
@@ -59,20 +59,23 @@
   function fixedUpdate(elems){
     //vector3.forward() 
     // == miscarea rectilinie uniforma
-    let varXY=  elems.getBoundingClientRect();
-    let convertedPercentage=varXY.y*100/(window.innerHeight+varXY.height);
-    
-    if(convertedPercentage<20){
-      convertedPercentage=20;
-    }
-    if(convertedPercentage>60){
-      convertedPercentage=60;
-    }
-  
-    if(varXY.y<window.innerHeight+varXY.height &&varXY.y>-varXY.height){
-      elems.animate({objectPosition:`center ${convertedPercentage}%`},{duration:500, fill:'forwards'});
+    if(window.innerHeight>1100){
 
-    } 
+      let varXY=  elems.getBoundingClientRect();
+      let convertedPercentage=varXY.y*100/(window.innerHeight+varXY.height);
+      
+      if(convertedPercentage<20){
+        convertedPercentage=20;
+      }
+      if(convertedPercentage>60){
+        convertedPercentage=60;
+      }
+    
+      if(varXY.y<window.innerHeight+varXY.height &&varXY.y>-varXY.height){
+        elems.animate({objectPosition:`center ${convertedPercentage}%`},{duration:500, fill:'forwards'});
+  
+      } 
+    }
   }
 
   //start anim when bottom = -height of element
@@ -92,22 +95,36 @@
   
   function randomClass(imgObj){
     let randomNumb=Math.random()*20 ;
-    if(randomNumb<1){
-      imgObj.classList.add('tall');
-      currLayout.push('tall');
-    }
-     else if(randomNumb>=1 && randomNumb<2){
-      imgObj.classList.add('wide');
-      currLayout.push('wide');
-    }
-   else  if(randomNumb>=4 && randomNumb<6){
-      imgObj.classList.add('wide');
-      imgObj.classList.add('tall');
-      currLayout.push('tall wide');
+    if(window.innerWidth>1100){
+
+      if(randomNumb<1){
+        imgObj.classList.add('tall');
+        currLayout.push('tall');
+      }
+       else if(randomNumb>=1 && randomNumb<2){
+        imgObj.classList.add('wide');
+        currLayout.push('wide');
+      }
+     else  if(randomNumb>=4 && randomNumb<6){
+        imgObj.classList.add('wide');
+        imgObj.classList.add('tall');
+        currLayout.push('tall wide');
+      }
+      else{
+        currLayout.push(' ');
+      }
     }
     else{
-      currLayout.push(' ');
+      if(randomNumb<1){
+        imgObj.classList.add('wide');
+        imgObj.classList.add('tall');
+        currLayout.push('tall wide');
+      }
+      else{
+        currLayout.push(' ');
+      }
     }
+    
   
   }
 
