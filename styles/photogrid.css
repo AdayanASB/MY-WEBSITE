@@ -11,6 +11,10 @@ html{
 
   
 }
+.title-galery{
+  font-weight: 700;
+  font-size: 2em;
+}
 .tall{
   grid-row: span 2;
 }
@@ -30,7 +34,37 @@ z-index: 100;
 }
 
 main{
-  padding-top: 200px;
+  padding-top: 75px;
+}
+.left-line,.right-line{
+  width:60vw;
+  height: 5px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  background-color: black;
+  /*
+  background: linear-gradient(-45deg,rgb(250, 190, 255), rgb(99, 24, 117),rgb(250, 190, 255));
+  animation: backg-move1 3s ease-in-out 0s infinite;
+  background-position: 50% 50%;
+  background-size: 200%;*/
+  border: 1px solid black;
+}
+.left-line{
+  transform: translateY(-150%);
+}
+.title-galery{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:2em;
+  font-weight: 700;
+  width: 90%;
+  text-align: center;
+}
+body{}
+.right-line{
+  transform: translateY(150%);
 }
 
 :root{
@@ -135,8 +169,9 @@ body{
 
   }
 
-  .photo-art{
-    aspect-ratio: 1/ 1;
+  .photo-art:hover{
+  
+    cursor: pointer;
   }
   .olx-display .left-arr,.olx-display .right-arr{
     width: 24px;

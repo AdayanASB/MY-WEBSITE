@@ -1,6 +1,6 @@
 
   let currLayout=[];
-
+  let contor=0;
   let olxElement=document.querySelector('.olx-display');
   let photoGrid=document.querySelector('.main-grid');
   let temporHTML='';
@@ -15,7 +15,7 @@
   let photoObj=document.querySelectorAll(".photo-art");
   photoObj.forEach((element,index)=>{
     
-    randomClass(element);
+    randomClass(element, index);
     for(i=0;i<alwaysSame.length;i++){
       if(index===alwaysSame[i].pos && window.innerWidth>1100){
         element.classList.remove('tall');
@@ -93,7 +93,8 @@
 
   
   
-  function randomClass(imgObj){
+  function randomClass(imgObj, index){
+    
     let randomNumb=Math.random()*20 ;
     if(window.innerWidth>1100){
 
@@ -115,10 +116,12 @@
       }
     }
     else{
-      if(randomNumb<1){
+      
+      if( index%7===0   ){
         imgObj.classList.add('wide');
         imgObj.classList.add('tall');
         currLayout.push('tall wide');
+        contor++;
       }
       else{
         currLayout.push(' ');

@@ -1,4 +1,4 @@
-
+document.body.style.zoom="100%"
 let musicNote='./PHOTOS/SVG/music-solid2.svg';
 let vinylIcon='./PHOTOS/SVG/compact-disc-solid.svg'
 let audioPlayer= document.querySelector('.main-audio');
