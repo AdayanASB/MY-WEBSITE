@@ -15,7 +15,7 @@ textElement=document.querySelector('.random-text-bg');
 textElement.onmousemove=(event)=>{
   let fullHTML='';
 
-  for(let i=1; i<=500; i++){
+  for(let i=1; i<=1000; i++){
     const radnomNumb=Math.round(Math.random());
     fullHTML+=`${radnomNumb}`;
   
