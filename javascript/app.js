@@ -51,23 +51,27 @@ function playAudio(){
   audioPlayer.controls=false;
   console.log('you payed the button');
 }
-
-//main transition between pages
 let animationDuration=600;
 let animDelay=250;
 r.style.setProperty('--anim-duration',`${animationDuration/1000}s`);
 r.style.setProperty('--anim-delay',`${animDelay/1000}s`);
 let animObj=document.querySelector('.animation-over');
+mainTransition();
+//main transition between pages
+function mainTransition(){
 
-animObj.classList.add('animatedStart');
+  
+  animObj.classList.add('animatedStart');
+  
+  setTimeout(()=>{
+  animObj.style.backgroundColor='rgba(0,0,0,0)';
+  animObj.style.zIndex=-1;
+  animObj.classList.remove('animatedStart');
+  animObj.style.transform='scale(1,0)';
+  
+  },(animationDuration+animDelay+100));
+}
 
-setTimeout(()=>{
-animObj.style.backgroundColor='rgba(0,0,0,0)';
-animObj.style.zIndex=-1;
-animObj.classList.remove('animatedStart');
-animObj.style.transform='scale(1,0)';
-
-},(animationDuration+animDelay+100));
 
 //function for all nav elements (tech/artist/contact/home) 
 let headerElements=document.querySelectorAll('.a').forEach((buttons)=>{
@@ -133,3 +137,7 @@ description:'VSCode'
 src:'./PHOTOS/SVG/techUsed/githubFIN.svg',
 description:'GitHub'
 }];
+
+function loadPage(){
+  mainTransition();
+}
