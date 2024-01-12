@@ -1,3 +1,5 @@
+//data-tilt-scale="1.1" data-tilt data-tilt-reverse="true" data-tilt-max="25"
+
 
 
 
@@ -9,15 +11,15 @@ window.mobileAndTabletCheck = function() {
 };
 
 if(!window.mobileAndTabletCheck()){
-    document.querySelectorAll('.s1-card').forEach((element,index)=>{
+    document.querySelectorAll('.project-panel').forEach((element,index)=>{
       VanillaTilt.init(element, {
-        max:5
+        max:25, scale:1.1, reverse:true
       });
       
     });
 }
 else{
-  document.querySelectorAll('.s1-card').forEach((element,index)=>{
+  document.querySelectorAll('.project-panel').forEach((element,index)=>{
     VanillaTilt.init(element, {
       max:0
     });

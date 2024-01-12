@@ -4,18 +4,18 @@ body,html,main{
 }
 main{
   display: flex;
-  justify-content: center;
+  padding-top:50px ;
   align-items: center;
   flex-direction: column;
   position: relative;
 
 }
 .main-section-contact{
-  width: 70%; 
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+
 }
 .main-section-contact .paraT{
   font-size: 70px;
@@ -30,7 +30,8 @@ main{
  row-gap: 40px;
  column-gap: 40px;
 
- padding-top: 100px;
+ margin-top: 10px;
+margin-bottom: 100px;
 
 }
 .item{
@@ -38,7 +39,8 @@ main{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 15em;
+  width: 100%;
+  max-width: 15em;
   height: 20em;
   border: 1px solid black;
   border-radius: 1em;
@@ -48,4 +50,12 @@ main{
   width:30px;
   height: 50px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width:800px) {
+  .main-section-contact .paraT{
+    font-size: 50px;
+    text-align: center;
+
+  }
 }
