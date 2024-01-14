@@ -12,7 +12,7 @@ document.body.onmousemove=(event)=>{
 };
 
 textElement=document.querySelector('.random-text-bg');
-textElement.onmousemove=(event)=>{
+window.onmousemove=(event)=>{
   let fullHTML='';
 
   for(let i=1; i<=1000; i++){
@@ -20,6 +20,6 @@ textElement.onmousemove=(event)=>{
     fullHTML+=`${radnomNumb}`;
   
   }
-  event.target.innerText =fullHTML;
+  textElement.innerText =fullHTML;
 
 };
