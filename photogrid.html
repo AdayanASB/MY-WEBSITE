@@ -1,69 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAIAS-FOTO GALERY</title>
-
-  
-  <link rel="stylesheet" href="./styles/media-querryies.css">
-  <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/header.css">
+  <meta name="description" content="Photography portfolio by BAIAS.">
+  <title>BAIAS — Photography Portfolio</title>
   <link rel="stylesheet" href="./styles/photogrid.css">
-
-
-  <script defer src="./javascript/app.js"></script>
-  <script defer src="./javascript/alwaysSameLY.js"></script>
-  <script defer src="./javascript/photoGrid.js"></script>
-  <script defer src="./javascript/vanilla-tilt.js"></script>
-  <script src="./javascript/gsap.min.js"></script>
+  <!-- GSAP and ScrollTrigger are loaded from the same CDN version. -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="./javascript/photogrid.js"></script>
   
 </head>
 <body>
-  <nav>
-    <div class="animation-over"></div>
-    <button class="js-button-music"><img class="ac-music" src="./PHOTOS/AC GRI.svg"><div class="rotate-wrapper"><img class="music-icon" src="./PHOTOS/SVG/compact-disc-solid.svg"></div></button>
-      <div class="header" id="h1">
-      <img class="logo a"  data-links="index.html"  src="./PHOTOS/SVG/Asset 1.svg">
-  
-      <div class="header-buttons">
-        <button class="a" data-links="index.html">Home</button>
-        <button class="a" data-links="art.html"  id="active-button">Art</button>
-        <button class="a" data-links="tech.html">Tech</button>
-        <button class="a" data-links="contact.html">Contact</a> 
-        <audio class="main-audio" loop>
-        <source src="./randomAssets/Acejax feat. Danilyon - By My Side [NCS Release].mp3" type="audio/mp3">
-        </audio>
-  
-      </div>
-  
-  
-    </div>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="BAIAS home">
+      <img src="./PHOTOS/SVG/Asset 1.svg" alt="BAIAS">
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="./index.html">Home</a>
+      <a href="./art.html" aria-current="page">Art</a>
+      <a href="./tech.html">Tech</a>
+      <a href="./contact.html">Contact</a>
     </nav>
-    <div class="olx-display" data-index>
-      <button class="back-button">&#8592;</button>
-      <div class="left-arr">&#60;
+    <span class="header-note">PHOTOGRAPHY / SELECTED WORK</span>
+  </header>
 
+  <main>
+    <section class="gallery-intro">
+      <p class="eyebrow">BAIAS — VISUAL ARCHIVE</p>
+      <h1>Photographs<br><span>in sequence.</span></h1>
+      <div class="intro-bottom">
+        <p>A selection of photographs, grouped into small visual collections.</p>
+        <span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span>
       </div>
-      <div class="img-holder">
-        
-      </div>
-      <div class="right-arr">
-        &#62;
-      </div>
+    </section>
 
-    </div>
+    <section class="portfolio-scroll" aria-label="Photography collections">
+      <div class="portfolio-stage">
+        <div class="scene-stack" id="scene-stack"></div>
 
-    <main>
-      <div class="title-galery">
-        <div class="left-line"></div>
-        <div>PHOTO GALERY</div>
-        <div class="right-line"></div>
+        <div class="stage-ui" aria-hidden="true">
+          <div class="stage-counter">
+            <span id="current-collection">01</span>
+            <span class="counter-slash">/</span>
+            <span id="total-collections">04</span>
+          </div>
+          <div class="stage-progress">
+            <span id="progress-fill"></span>
+          </div>
+          <span class="stage-scroll-label">SCROLL TO EXPLORE</span>
+        </div>
+
+        <div class="stage-loading" id="stage-loading">Loading collections…</div>
       </div>
-      <div class="main-grid"></div>
-  
-    </main>
-  
-  
+    </section>
+
+    <section class="gallery-outro">
+      <p class="eyebrow">END OF SELECTION</p>
+      <h2>More work.<br><span>More stories.</span></h2>
+      <a href="./contact.html">GET IN TOUCH <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <div class="photo-viewer" id="photo-viewer" aria-hidden="true">
+    <button class="viewer-close" type="button" aria-label="Close image viewer">×</button>
+    <button class="viewer-prev" type="button" aria-label="Previous photograph">←</button>
+    <figure class="viewer-figure">
+      <img id="viewer-image" src="" alt="">
+      <figcaption id="viewer-caption"></figcaption>
+      <span id="viewer-count"></span>
+    </figure>
+    <button class="viewer-next" type="button" aria-label="Next photograph">→</button>
+  </div>
+
+  <noscript>
+    <p class="noscript-message">This interactive portfolio requires JavaScript.</p>
+  </noscript>
 </body>
 </html>
