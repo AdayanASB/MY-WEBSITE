@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scenes lab — test</title>
+
+  <!-- FONTS
+       Split in four groups, so a typo in one can never break the others.
+       The browser only downloads the fonts that are actually used on screen.
+       To try a new font: add it to one of these links, then add its name in lab.js (FONT_GROUPS). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- neon / techy -->
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&amp;family=Chakra+Petch:wght@400;600;700&amp;family=Michroma&amp;family=Syncopate:wght@400;700&amp;family=Tilt+Neon&amp;family=Orbitron:wght@500;800&amp;family=Syne:wght@500;800&amp;display=swap" rel="stylesheet">
+  <!-- contrast / heavy -->
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700;800&amp;family=Playfair+Display:wght@700;800&amp;family=Abril+Fatface&amp;family=DM+Serif+Display&amp;family=Instrument+Serif:ital@0;1&amp;family=Fraunces:wght@400;700&amp;family=Anton&amp;family=Big+Shoulders+Display:wght@500;800&amp;family=Bricolage+Grotesque:wght@400;700&amp;display=swap" rel="stylesheet">
+  <!-- handwriting -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&amp;family=Gochi+Hand&amp;family=Amatic+SC:wght@400;700&amp;family=Yellowtail&amp;family=Permanent+Marker&amp;family=Covered+By+Your+Grace&amp;display=swap" rel="stylesheet">
+  <!-- text / UI -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&amp;family=Roboto:wght@300;400&amp;family=Instrument+Sans:wght@400;500&amp;family=DM+Sans:wght@300;400;500&amp;family=IBM+Plex+Sans:wght@300;400&amp;family=Hanken+Grotesk:wght@300;400;500&amp;family=Familjen+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./lab (1).css">
+  <script defer src="./lab (1).js"></script>
+</head>
+<body data-nav="clear" data-mode="dark">
+
+  <!-- the header: 3 looks, switch them in the Tweak panel (Header > Nav style) -->
+  <header class="lab-nav">
+    <a class="brand" href="../../index.html">BAIAS</a>
+    <nav aria-label="Main navigation">
+      <a href="../../index.html">Home</a>
+      <a href="../../art.html" aria-current="page">Art</a>
+      <a href="../../tech.html">Tech</a>
+      <a href="../../contact.html">Contact</a>
+    </nav>
+    <span class="nav-scene" id="nav-scene"></span>
+  </header>
+
+  <!-- every scene is built here by lab.js from the SCENES list -->
+  <main class="lab" id="lab"></main>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="hud">
+    <div class="arrows">
+      <button class="arrow" id="prev" type="button" aria-label="Previous scene">&lt;</button>
+      <button class="arrow" id="next" type="button" aria-label="Next scene">&gt;</button>
+    </div>
+    <span class="count" id="count">1/3</span>
+    <div class="bar"><i id="bar-fill"></i></div>
+  </div>
+
+  <button class="tweak-btn" id="tweak-btn" type="button">Tweak <kbd>T</kbd></button>
+  <aside class="panel" id="panel" hidden aria-label="Tweak panel"></aside>
+
+  <noscript><p style="position:fixed;inset:40px;color:#fff">This page needs JavaScript.</p></noscript>
+</body>
+</html>
